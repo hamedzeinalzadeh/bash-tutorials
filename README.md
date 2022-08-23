@@ -7,3 +7,4 @@
 Sometimes bash scripting is hard to recall for ordinary usage. Creating this content is to review scripting quickly and use the syntax template more speedily.
 
 ## :bookmark_tabs: Table of content
+- 
