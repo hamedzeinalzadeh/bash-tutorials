@@ -1,5 +1,11 @@
-# :wrench: Bash script professional components
+# BASH SCRIPT STRUCTURE
+## :key: Bash scripts 3 core elements
+- ***Shebang line*** : 
+<br>`bash#!/bin/bash` – Execute the file using the Bash shell
+- ******
+## :wrench: Bash script professional components
 You can use some elements in your script to represent it in a more professional view.
+
 ```bash
 # Author: Hamed Zeinalzadeh
 # Created: 21th August 2022
@@ -12,9 +18,6 @@ You can use some elements in your script to represent it in a more professional 
 # backup_script
 ```
 
-
-
-
 ## :heavy_check_mark: Set secure permissions
 Scripts must have execute permission to run.
 
@@ -25,7 +28,7 @@ File permissions in Linux file system are managed in three distinct user classes
 
  Each class can have read, write and execute permissions. File permission can be represented in a symbolic or numeric (octal) format.
 
-Search your specific octal code on [chmod-calculator.com](https://chmod-calculator.com/)
+Search your specific octal code on [www.chmod-calculator.com](https://chmod-calculator.com/)
 
 ```bash
  chmod <octal code> <file>
@@ -35,7 +38,7 @@ Search your specific octal code on [chmod-calculator.com](https://chmod-calculat
 For example:  744(rwxr--r--)
 ## :bulb: Making scripts accessible
 To make bash scripts accessible from any directory on your device, you can pass the steps below, but occasionally, it is not recommended for security reasons.
-- Add your custom directory to the  &nbsp; `PATH` &nbsp; by editing your &nbsp;`~/.profile` &nbsp;. You can use any editor like &nbsp; `vim` &nbsp;  or &nbsp; `nano` &nbsp; to open the &nbsp;`~/.profile` &nbsp; file and add the command below at the end of the file.
+- Add your custom directory to the `PATH`  by editing your `~/.profile`. You can use any editor like `vim` or `nano` to open the `~/.profile` file and add the command below at the end of the file.
 
 ```bash
 export PATH="$PATH:/custom_directory_path"
@@ -43,7 +46,7 @@ export PATH="$PATH:/custom_directory_path"
 
 - Reload the &nbsp; `~/.profile` &nbsp; from your terminal 
 
-```bash
+```bash title='hello'
 $ source ~/.profile
 ```
 
@@ -52,5 +55,5 @@ $ source ~/.profile
 ```bash
 $ mv my_script the_custom_directory
 ```
-:warning: Note:
-> Avoid giving your scripts names that may conflict with another command on your system.
+> ###:warning: ***Note***
+> <br>Avoid giving your scripts names that may conflict with another command on your system.
