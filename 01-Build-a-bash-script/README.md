@@ -33,12 +33,11 @@ File permissions in Linux file system are managed in three distinct user classes
 
  Each class can have read, write and execute permissions. File permission can be represented in a symbolic or numeric (octal) format.
 
-Search your specific octal code on [www.chmod-calculator.com](https://chmod-calculator.com/)
-
 ```bash
  chmod <octal code> <file>
 ```
-
+Search your specific octal code on:
+<br>:link: [www.chmod-calculator.com](https://chmod-calculator.com/)
 
 For example:  744(rwxr--r--)
 ## :bulb: Making scripts accessible
@@ -60,5 +59,5 @@ $ source ~/.profile
 ```bash
 $ mv my_script the_custom_directory
 ```
-> ###:warning: ***Note***
+> :warning: <b>Note</b>
 > <br>Avoid giving your scripts names that may conflict with another command on your system.
