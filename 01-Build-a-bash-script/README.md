@@ -1,8 +1,13 @@
 # BASH SCRIPT STRUCTURE
 ## :key: Bash scripts 3 core elements
 - ***Shebang line*** : 
-<br>`bash#!/bin/bash` – Execute the file using the Bash shell
-- ******
+<br>`#!/bin/bash` – Execute the file using the Bash shell
+- ***Commands*** :
+<br>Commands will be task-dependent
+- ***Exit statement*** :
+<br>0=Success &nbsp; Non-zero=Failure
+<br>:link: [Advanced Bash-Scripting Guid: Exit Codes With Special Meanings](https://tldp.org/LDP/abs/html/exitcodes.html) 
+
 ## :wrench: Bash script professional components
 You can use some elements in your script to represent it in a more professional view.
 
