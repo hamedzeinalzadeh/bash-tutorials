@@ -23,7 +23,7 @@ You can use some elements in your script to represent it in a more professional 
 # backup_script
 ```
 
-## :heavy_check_mark: Set secure permissions
+## :heavy_check_mark: Set Secure Permissions
 Scripts must have execute permission to run.
 
 File permissions in Linux file system are managed in three distinct user classes: 
@@ -40,7 +40,7 @@ Search your specific octal code on:
 <br>:link: [www.chmod-calculator.com](https://chmod-calculator.com/)
 
 For example:  744(rwxr--r--)
-## :bulb: Making scripts accessible
+## :bulb: Making Scripts Accessible
 To make bash scripts accessible from any directory on your device, you can pass the steps below, but occasionally, it is not recommended for security reasons.
 - Add your custom directory to the `PATH`  by editing your `~/.profile`. You can use any editor like `vim` or `nano` to open the `~/.profile` file and add the command below at the end of the file.
 
@@ -48,7 +48,7 @@ To make bash scripts accessible from any directory on your device, you can pass 
 export PATH="$PATH:/custom_directory_path"
 ```
 
-- Reload the &nbsp; `~/.profile` &nbsp; from your terminal 
+- Reload the `~/.profile` from your terminal 
 
 ```bash title='hello'
 $ source ~/.profile
