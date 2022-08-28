@@ -44,9 +44,10 @@ Advanced syntax is `${parameter}`. The braces are required when parameter is a p
 |-------------------	|---------------------------------------------------------------------------------------	|
 | **${parameter^}**          	| Convert the first character of the parameter to uppercase                                      	|
 | **${parameter^^}**          	| Convert all characters of the parameter to uppercase 	|
-| **${parameter,}**          	| Convert all characters of the parameter to lowercase                                                           	|
+| **${parameter,}**          	| Convert the first character of the parameter to lowercase                                                           	|
+| **${parameter,,}**          	| Convert all characters of the parameter to lowercase                                                           	|
 | **${#parameter}**      	| Illustrate the number of  the parameter value characters                                                   	|
-| **${parameter : offset : length}**      	| Expand the parameter value starting at character number defined by “offset and expand up to a length of “length”   |
+| **${parameter : offset : length}**      	| Expand the parameter value starting at character number defined by “offset " and expand up to a length of “length”   |
 
 > :warning: <b>Note</b>
 > <br>None of the tricks alter the original parameter value.
@@ -54,13 +55,13 @@ Advanced syntax is `${parameter}`. The braces are required when parameter is a p
 <br>:link: [Bash parameter extension (bash reference manual)](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#Bash-Variables)
 
 
-## :1234: Command Substitution
+## :hash: Command Substitution
 Command substitution allows the output of a command to replace the command itself. Command substitution occurs when a command is enclosed as follows:
 ```bash
 $(command)
 ```
 
-## :hash: Arihtmetic Expansion
+## :1234: Arihtmetic Expansion
 Arithmetic expansion can be used to perform simple integer arithmetic operations, and uses the syntax:
 ```bash 
 $(( expression ))
@@ -68,12 +69,52 @@ $(( expression ))
 
 ### :yellow_circle: Arithmetic Operators Ranked in Order of Precedence 
 
-| **Operator** 	| **Description                                                                 	|
+| **Operator** | **Description**                                                                 	|
 |--------------	|-------------------------------------------------------------------------------	|
-| **( &nbsp; )**    	| Anything placed in parentheses has the highest precedence.                    	|
+| **( &nbsp; )**    	| Anything placed in parentheses has the highest precedence                    	|
 | **\*\***     	| Exponentiation. 3**2 means 3 to the power of 2, which is 9                    	|
-| **\* &nbsp; / &nbsp;%** 	| Multiplication, Division, and Modulo(calculates the remainder of a division). 	|
+| **\* &nbsp; / &nbsp;%** 	| Multiplication, Division, and Modulo(calculates the remainder of a division) 	|
 | **\+ &nbsp; \-**    	| Addition and substraction                                                     	|
 
-## bc Command
+## :bulb: bc Command
 `BC`, which stands for `Basic Calculator`, is a command in `Bash` that is used to provide the functionality of a scientific calculator within a Bash script. This can be useful for scripting with various arithmentic use cases and scenarios.
+<br>Syntax for bc command:
+```bash
+echo “expression” | bc
+```
+
+The value of the `scale` function is the number of digits after the decimal point in the expression. 
+```bash
+echo “scale=value; expression” | bc
+```
+For example:
+```bash
+echo “scale=2; 5/2” | bc  
+
+# The answer is 2.50
+```
+## :orange_circle: Tilde Expansion
+The tilde expansion is used to expand several specific pathnames:
+
+- Home directories
+- Current/previous working directory
+- Directories from directory stack.
+
+| **Syntax** | **Description**                                                                 	|
+|--------------	|-------------------------------------------------------------------------------	|
+| **~**    	| The value of $HOME                    	|
+| **~username**     	| If the given username exists, return the path to the user's home directory      	|
+| **~+** 	| The value of $PWD (current working directory)	|
+| **~-**    	| The value of $OLDPWD (previous working directory)                                       	|
+
+## :green_circle: Brace Expansion
+Brace expansion is a mechanism by which arbitrary strings may be generated.
+
+| **Syntax** | **Description**                                                                 	|
+|--------------	|-------------------------------------------------------------------------------	|
+| **{0,1,2,3}**    	| 0 1 2 3                    	|
+| **{0..3}**     	| 0 1 2 3      	|
+| **{a..d}** 	| a b c d	|
+| **day{01..07}**    	|   day01 day02 day03 day04 day05 day06 day07                                      	|
+| **file{1..4}.txt** 	| file1.txt &nbsp; file2.txt &nbsp; file3.txt &nbsp; file4.txt	|
+| **{directory1,directory2}/file{1..2}.txt** 	| directory1/file1.txt &nbsp;directory1/file2.txt <br>directory2/file1.txt &nbsp; directory2/file2.txt	|
