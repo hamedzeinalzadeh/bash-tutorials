@@ -59,7 +59,7 @@ Hello,
 World!
 ```
 
-### :blue_circle: Read Options
+### :purple_circle: Read Options
 
 | **Option Name** 	| **Description**                                                                       	|
 |-------------------	|---------------------------------------------------------------------------------------	|
