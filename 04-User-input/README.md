@@ -23,19 +23,22 @@ myscript Hamed linux green
 # green --> $3
 ```
 
-## :: Special Parameters
+## :zap: Special Parameters
 The shell treats several parameters specially. These parameters may only be referenced; assignment to them is not allowed.
 
 ### :green_circle: Some Common Shell Variables
 
-| **Variable Name** 	| **Description**                                                                       	|
-|-------------------	|---------------------------------------------------------------------------------------	|
-| **Special Parameter**          	| Indicates the home directory of the current user                                      	|
-| **PATH**          	| Includes the necessary directories only that shell should search for executable files 	|
-| **USER**          	| The current user's username                                                           	|
-| **HOSTNAME**      	| The host-name of the current machine                                                  	|
+| **Special Parameter** 	| **Description**                                                                                                                                                                 	| ***Shell***                      	|                 ***Value***                	|
+|:---------------------:	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------	|:------------------------------------------:	|
+|         **$#**        	| Expands to the ***number*** of positional parameters in decimal.                                                                                                                 	| my_script.sh 1 2 3               	|                      3                     	|
+|        **$?***        	| Expands to the ***exit status*** of the ***most recently*** executed foreground pipeline.                                                                                        	| echo "Hi!" echo $?               	| 0 <br>(Because `echo "Hi!"` is successful) 	|
+|         **$0**        	| Expands to the ***name*** of the shell or shell script.                                                                                                                          	| my_script.sh 1 2 3               	|                my_script.sh                	|
+|         **$@**        	| Expands to the positional parameters, starting from one. When the expansion is ***not*** within double quotes, each positional parameter ***expands*** to a ***separate word***. 	| my_script.sh "hello world"       	|          hello &nbsp; world <br>(2 words)         	|
+|        **"$@"**       	| Expands to the positional parameters, ***without*** subsequent word splitting.                                                                                                   	| my_script.sh "hello world"       	|         hello world <br> (1 words)         	|
+|        **$\***        	| Exactly the same as $@                                                                                                                                                           	| my_script.sh "hello world"       	|         hello &nbsp; world <br> (2 words)         	|
+|       **"$\*"**       	| Expands to the positional parameters, ***without*** subsequent word splitting separated by the first letter of the IFS variable.                                                 	| IFS=, my_script.sh "hello world" 	|         hello,world <br> (1 words)         	|
 
-## :: The Read Command
+## :memo: The Read Command
 `read` is a bash built-in command that reads a line from the standard input (or from the file descriptor) and split the line into words. The first word is assigned to the first name, the second one to the second name, and so on.
 <br>Syntax for `read` command:
 
