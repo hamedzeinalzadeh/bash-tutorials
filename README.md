@@ -12,3 +12,4 @@ Sometimes bash scripting is hard to recall for ordinary usage. Creating this con
 - [02-Variables-and-shell-expansions](02-Variables-and-shell-expansions)
 - [03-Bash-command-processing](03-Bash-command-processing)
 - [04-User-input](04-User-input)
+- [05-Logic](05-Logic)
