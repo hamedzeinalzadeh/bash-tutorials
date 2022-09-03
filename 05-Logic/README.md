@@ -78,6 +78,57 @@ fi
 <br>
 
 ## :: Case Statement
+The bash `case` statement is generally used to simplify complex conditionals when you have multiple different choices. Using the `case` statement instead of creating `elif` statements makes bash scripts more readable and easier to maintain.
+
+> :warning: <b>Note</b>
+> <br>`case` statements can only
+work with ***1 variable***.
+
+Syntax:
+```bash 
+case Expression in
+
+  Pattern_1)
+    STATEMENTS
+    ;;
+
+  Pattern_2)
+    STATEMENTS
+    ;;
+
+  Pattern_N)
+    STATEMENTS
+    ;;
+
+  *)
+    STATEMENTS
+    ;;
+esac
+```
+
+Example:
+```bash
+#!/bin/bash
+
+read -p "Please enter a number: " number
+case "$number" in
+"") echo "You didn't enter anything!"
+[0-9]) echo "you have entered a single digit number" ;;
+[0-9][0-9]) echo "you have entered a two digit number" ;;
+[0-9][0-9][0-9]) echo "you have entered a three digit number" ;;
+*) echo "you have entered a number that is more than three digits" ;;
+esac
+```
+
+> :warning: <b>Note</b>
+> <br>Key points: 
+> - Remember to use a `$` in front of
+the ***variable name*** 
+> - Remember to use a `$` in front of
+the ***variable name*** 
+> - Remember to use a `$` in front of
+the ***variable name*** 
+
 
 
 
