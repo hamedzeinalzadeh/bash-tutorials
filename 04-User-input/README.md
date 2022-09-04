@@ -70,8 +70,7 @@ World!
 | **-s**          	| 	Does ***not*** echo the user's input. 	|
 | **-t \<time\>**          	| The command ***times out*** after the specified time in seconds.                                                           	|
 | **-N \<number\>**      	| 	Returns after reading the specified ***number*** of chars, ignoring the delimiter.                                                  	|
-| **-n \<number\>**      	| 	Limit the user's response to a ***maximum*** number of
-chars.                                                	|
+| **-n \<number\>**      	| 	Limit the user's response to a ***maximum*** number of chars.                                                	|
 
 <br>:link: [Bash read built-in](https://linuxize.com/post/bash-read/)
 
