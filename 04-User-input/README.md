@@ -85,7 +85,7 @@ read -s -N 5 -p "Enter your password (exactly 5 digits): " password
 echo "$name, $age, $password" >> data.csv
 ```
 
-## :: The Select Command
+## 📋 The Select Command
 The `select` command provides a dropdown
 menu to select. The user may select an option from
 the list of options.

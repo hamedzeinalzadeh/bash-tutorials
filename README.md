@@ -13,3 +13,4 @@ Sometimes bash scripting is hard to recall for ordinary usage. Creating this con
 - [03-Bash-command-processing](03-Bash-command-processing)
 - [04-User-input](04-User-input)
 - [05-Logic](05-Logic)
+- [06-Processing-options-and-reading-files](06-Processing-options-and-reading-files)

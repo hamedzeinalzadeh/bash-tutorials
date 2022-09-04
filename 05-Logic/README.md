@@ -11,7 +11,7 @@ operators that enable
 us to create lists of
 commands that
 operate in different
-ways
+ways.
 
 <br>
 
@@ -30,7 +30,7 @@ ways
 The test command compares one element against another and returns true or false.
 <br>The test command takes an `Expression` as an argument. After calculating the `Expression`, the test returns a value to the bash variable `“$?”`. If the value is `0`, then the expression evaluation was ***true***. If the value is `1`, then the expression evaluation was ***false***.
 
-<br>:link: [Bash test command](https://linuxhint.com/bash-test-command/)
+:link: [Bash test command](https://linuxhint.com/bash-test-command/)
 
 syntax:
 ```bash
