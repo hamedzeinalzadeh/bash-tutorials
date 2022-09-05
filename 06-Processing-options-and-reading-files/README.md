@@ -22,3 +22,20 @@ echo "$num"
 num=$(( "$num" - 1 ))
 done
 ```
+
+## ⚙️ Handling Command Line Options
+The `getopts` command enables bash to get the the
+***options*** provided to the script on the command line.
+
+However, `getopts` does not get all the options at once; it
+only gets the ***very next option*** on the command line each
+time it is run.
+
+Therefore, the `getopts` command is often used as ***part of a
+while loop***, to ensure that all command line options are
+processed.
+
+Syntax for the `getops` command:
+```bash
+getopts "optstring" variable
+```
