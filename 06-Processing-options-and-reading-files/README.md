@@ -16,6 +16,7 @@ getopts "optstring" variable
 ```
 
 
+
 ## ⚙️ While loops 
 
 The `while` loop allows for repetitive execution of a list of commands, as long as the condition controlling the while loop executes successfully (exit status of ***zero***).
