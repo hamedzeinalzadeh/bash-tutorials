@@ -7,7 +7,7 @@
 
 Sometimes bash scripting is hard to recall for ordinary usage. Creating this content is to review scripting quickly and use the syntax template more speedily.
 
-## :bookmark_tabs: Table of Content
+## :bookmark_tabs: Table of Contents
 - [01-Build-a-bash-script](01-Build-a-bash-script)
 - [02-Variables-and-shell-expansions](02-Variables-and-shell-expansions)
 - [03-Bash-command-processing](03-Bash-command-processing)
